@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS333 Attendance</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <img src="./bg.jpg" alt="Background image">
+        <div id="left">
+            Mark your <span>today's attendance</span> by using the code provided in class by <span>Professor Bremner</span>
+            <br><hr>
+        </div>
+        <div id="right">
+            <form action="submit" method="POST">
+            <label for="first-name">First Name:</label>
+            <input type="text" name="first-name">
+            <label for="last-name">Last Name:</label>
+            <input type="text" name="last-name">
+            <label for="code">Code:</label>
+            <input type="text" name="code"> 
+            <span id="button-container"><button type="submit">Submit</button></span>
+            </form>
+        </div>
+            
+    </div>
+</body>
+</html>

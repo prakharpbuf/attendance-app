@@ -1,0 +1,124 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	width: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*------------------------------------------------*/
+
+
+#container{
+ position: relative;
+ height: 100vh;
+ width: 100vw;
+}
+#container img{
+    user-select: none;
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#left{
+    float: left;
+    font-weight: 250;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.01em;
+    padding: 8% 0 0 13%;
+    width: 30%;
+    line-height: 145%;
+    font-size: 2.6em;
+}
+hr{
+    display: block;
+    border-top: 5px solid #FFC72C;
+    width: 50%;
+    display: inline-block;
+}
+#left span{
+    color: #005BBB;;
+}
+
+#right{
+    font-family: 'Roboto', 'Times New Roman', Times, serif;
+    float: right;
+    width: 30%;
+    padding: 8% 15% 0 10%;
+}
+form{
+    line-height: 180%;
+}
+label{
+    color: #3C3E35;
+    font-weight: 150;
+}
+input{
+    border: 0.2px solid #002F56;
+    margin-bottom: 5%;
+    padding: 2%;
+    width: 100%;
+}
+
+#button-container{
+    padding-top: 5%;
+    display: block;
+    width: 100%;
+}
+button{
+    cursor: pointer;
+    font-size: 1.3em;
+    color: #ffffff;
+    border: none;
+    background-color: #005BBB;
+    width: 100%;
+    padding: 2%;
+}
