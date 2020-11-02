@@ -23,6 +23,12 @@
             <label for="code">Code:</label>
             <input type="text" name="code"> 
             <span id="button-container"><button type="submit">Submit</button></span>
+            <% if (messages.error) { %>
+            <p style="color:red; font-size: 1em;"><%- messages.error %></p>
+            <% } %>
+            <% if (messages.success) { %>
+            <p style="color:green; font-size: 1em;"><%- messages.success %></p>
+            <% } %>
             </form>
             <a href="/login">I'm Professor Bremner</a>
         </div>
