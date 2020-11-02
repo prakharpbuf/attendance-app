@@ -52,6 +52,9 @@ table {
  height: 100vh;
  width: 100vw;
 }
+#mobile-img{
+    display: none;
+}
 #container img{
     user-select: none;
 -moz-user-select: none;
@@ -94,4 +97,25 @@ button{
     color: #ffffff;
     font-size: 0.6em;
     background-color: #005BBB;
+}
+@media screen and (max-width: 750px){
+    input{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 860px){
+    #mobile-img{
+        display: block;
+    }
+    #desktop-img{
+        display: none;
+    }
+}
+@media screen and (max-width: 500px){
+    input{
+        width: 80%;
+    }
+    button{
+        width: 50%;
+    }
 }

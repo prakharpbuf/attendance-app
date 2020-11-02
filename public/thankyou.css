@@ -47,6 +47,10 @@ table {
 /*------------------------------------------------*/
 
 
+
+#mobile-img{
+    display: none;
+}
 #container{
  position: relative;
  height: 100vh;
@@ -76,4 +80,13 @@ table {
     text-align: center;
 	padding: 20% 20% 0 20%;
 	padding-top: 40vh;
+}
+
+@media screen and (max-width: 860px){
+    #mobile-img{
+        display: block;
+    }
+    #desktop-img{
+        display: none;
+    }
 }
