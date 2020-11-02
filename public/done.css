@@ -46,7 +46,9 @@ table {
 
 /*------------------------------------------------*/
 
-
+#mobile-img{
+    display: none;
+}
 #container{
  position: relative;
  height: 100vh;
@@ -78,3 +80,18 @@ table {
 	padding-top: 40vh;
 }
 
+@media screen and (max-width:850px){
+	#container{
+		width: 100%;
+		height: 100%;
+	}
+	td{
+		width:5%;
+	}
+	 #mobile-img{
+        display: block;
+    }
+    #desktop-img{
+        display: none;
+    }
+}
