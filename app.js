@@ -7,16 +7,12 @@ const cookieParser = require('cookie-parser');
 const expressValidator = require('express-validator');
 const { Client } = require('pg');
 
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-
 var conn = require('./db.js');
 const index = require('./routes/index.js');
 const auth = require('./routes/auth.js');
 const landing = require('./routes/landing.js')
 const submit = require('./routes/submit.js');
+
 
 
 app.set('view engine', 'ejs');
