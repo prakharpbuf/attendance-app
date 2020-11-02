@@ -9,6 +9,7 @@ const { Client } = require('pg');
 var conn = require('./db.js');
 const index = require('./routes/index.js');
 const auth = require('./routes/auth.js');
+const landing = require('./routes/landing.js')
 
 
 app.set('view engine', 'ejs');
@@ -33,7 +34,9 @@ app.use(session({
 app.use(expressValidator());
 
 app.use('/', index);
+app.use('/', landing);
 app.use('/', auth);
+
 
 
 app.get('*', (req, res) => {

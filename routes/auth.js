@@ -15,18 +15,23 @@ router.get('/login', (req, res) => {
 });
 
 router.post('/auth', function (req, res, next) {
-    var email = req.body.email;
-    var password = req.body.password
-    connection.query('SELECT * FROM users WHERE email = $1 AND password = $2', [email, password], (err, rows) => {
+    var user = {
+        email: req.sanitize('email').escape().trim(),
+        password: req.sanitize('password').escape().trim()
+    }
+    connection.query('SELECT * FROM users WHERE email = $1 AND password = $2', [user.email, user.password], (err, rows) => {
         if (err) console.log(err);
         // if user not found
+        if(rows.rows.length==0){
+            req.flash('error', 'Incorrect ID/Password');
+            return res.render('login');
+        }
         if (rows.rows.length == 1) { // if user found
-            // render to views/user/edit.ejs template file
             req.session.loggedin = true;
             return res.redirect('dashboard');
         }
         else {
-            req.flash('error', 'Incorrect ID/Password');
+            req.flash('error', 'Some error occured, please contact developer!');
             return res.render('login');
         }
     });
