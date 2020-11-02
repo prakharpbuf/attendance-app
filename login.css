@@ -74,6 +74,24 @@ table {
     line-height: 150%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-	padding: 20% 20% 0 20%;
-	padding-top: 40vh;
+    padding: 0 20% 0 20%;
+    padding-top: 30vh;
+}
+input{
+    margin-bottom: 2%;
+    padding: 1%;
+    width: 25%;
+}
+label{
+    display: block;
+}
+
+button{
+    cursor: pointer;
+    padding: 1%;
+    width: 20%;
+    border: none;
+    color: #ffffff;
+    font-size: 0.6em;
+    background-color: #005BBB;
 }

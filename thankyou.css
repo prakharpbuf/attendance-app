@@ -74,5 +74,6 @@ table {
     line-height: 150%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    padding: 20% 20% 0 20%;
+	padding: 20% 20% 0 20%;
+	padding-top: 40vh;
 }

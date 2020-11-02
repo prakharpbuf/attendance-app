@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AS333 Attendance</title>
-    <link rel="stylesheet" href="thankyou.css">
+    <link rel="stylesheet" href="login.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 
@@ -13,7 +13,14 @@
     <div id="container">
         <img src="./bg.jpg" alt="Background image">
         <div>
-            You have already submitted this week's code, please come back on Thursday :)
+            <form action="auth" method="post">
+                <label for="email">Email:</label>
+                <input type="text" name="email">
+                <label for="password">Password:</label>
+                <input type="password" name="password">
+                <br>
+                <button type="submit">Login</button>
+            </form>
         </div>
     </div>
 </body>
