@@ -14,7 +14,7 @@ router.use(function (req, res, next) {
 router.get('/landing', (req, res) => {
     var d = new Date();
     var n = d.getDay()
-    if (n == 5 || n == 4 || n == 3 || n==4) {   //thursaday is 5
+    if (n == 5 || n == 4 || n == 3 || n==0) {   //thursaday is 5
         if(!req.session.marked){
             res.render("landing");
         }
