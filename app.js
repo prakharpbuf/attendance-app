@@ -8,6 +8,9 @@ const expressValidator = require('express-validator');
 const { Client } = require('pg');
 
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 
 var conn = require('./db.js');
 const index = require('./routes/index.js');
