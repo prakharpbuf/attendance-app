@@ -64,23 +64,23 @@
         </div>
         <div style="text-align: center;">
         <% if (messages.error) { %>
-        <p style="color:red; font-size: 1em; margin-top: -15%;"><%- messages.error %></p>
+        <p style="color:red; font-size: 0.5em; "><%- messages.error %></p>
         <% } %>
         <% if (messages.success) { %>
-        <p style="color:green; font-size: 1em; margin-top: -15%;"><%- messages.success %></p>
+        <p style="color:green; font-size: 0.5em;"><%- messages.success %></p>
         <% } %>
         </div>
         <span id="btn">
         <form action="/allow" method="post">
-            <button type="submit">Allow codes</button>
+            <button id="allow" type="submit">Allow codes</button>
             <% if (messages.allowed) { %>
-            <p style="color:green; font-size: 1em; margin-top: -15%;"><%- messages.allowed %></p>
+            <p style="color:green; font-size: 1em;"><%- messages.allowed %></p>
             <% } %>
         </form>
         <form action="/disallow" method="post">
-            <button type="submit">Disllow codes</button>
+            <button id="disallow "type="submit">Disllow codes</button>
             <% if (messages.disallowed) { %>
-            <p style="color:red; font-size: 1em; margin-top: -17%;"><%- messages.disallowed %></p>
+            <p style="color:red; font-size: 1em;"><%- messages.disallowed %></p>
             <% } %>
         </form>
         <form action="/logout" method="post">
