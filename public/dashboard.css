@@ -106,3 +106,12 @@ button{
         display: none;
     }
 }
+
+form button{
+	padding:1%;
+	font-size: 1em;
+	width: 10%;
+}
+#btn{
+	text-align: center;
+}

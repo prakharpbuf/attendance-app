@@ -39,7 +39,17 @@ router.post('/auth', function (req, res, next) {
 
 router.get('/dashboard', function (req, res) {
     if (req.session.loggedin && req.session) {
-        res.render('dashboard');
+        connection.query('Select allowed from allow', function(err,result){
+            if(result.rows[0].allowed)
+            {req.flash('allowed','Codes are currently accepted')
+            res.render('dashboard');
+        }
+        else{
+            req.flash('disallowed','Codes are currently not accepted')
+            res.render('dashboard')
+        }
+
+        })
     } else {
         req.flash('error', 'Please login first!');
         return res.redirect('login');
@@ -47,10 +57,10 @@ router.get('/dashboard', function (req, res) {
 });
 
 
-router.get('/logout', function (req, res) {
-    return res.redirect('login');
+router.post('/logout', function (req, res) {
     req.session.loggedin = 0;
     req.session.destroy();
+    return res.redirect('login');
 });
 
 

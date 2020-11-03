@@ -12,20 +12,18 @@ router.use(function (req, res, next) {
 
 
 router.get('/landing', (req, res) => {
-    var d = new Date();
-    var n = d.getDay()
-    if (n == 5 || n == 4 || n == 3 || n==0 || n==1 || n==2 || n==6) {   //thursaday is 5
-        if(!req.session.marked){
-            res.render("landing");
+    connection.query('Select allowed from allow', function (err, result) {
+        if (result.rows[0].allowed) {
+            if (!req.session.marked) {
+                res.render("landing");
+            }
+            res.sendFile(parent + '/public/thankyou.html')
         }
-        else{
-            res.sendFile(parent+'/public/thankyou.html')
+        else {
+            res.sendFile(parent + "/public/done.html");
         }
-    }
 
-    else {
-        res.sendFile(parent + "/public/done.html");
-    }
+    })
 
 });
 

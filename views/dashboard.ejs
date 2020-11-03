@@ -20,7 +20,7 @@
                         Reports for 5th Nov
                     </td>
                     <td>
-                        <button onclick="window.location.href='/get/11-05'">Get</button>
+                        <button onclick="window.location.href='/2020-11-05'">Get</button>
                     </td>
                 </tr>
                 <tr>
@@ -28,7 +28,7 @@
                         Reports for 12th Nov
                     </td>
                     <td>
-                        <button onclick="window.location.href='/get/11-12'">Get</button>
+                        <button onclick="window.location.href='/2020-11-12'">Get</button>
                     </td>
                 </tr>
                 <tr>
@@ -36,32 +36,58 @@
                         Reports for 19th Nov
                     </td>
                     <td>
-                        <button onclick="window.location.href='/get/11-19'">Get</button>
+                        <button onclick="window.location.href='/2020-11-19'">Get</button>
                     </td>
                 </tr><tr>
                     <td>
                         Reports for 26th Nov
                     </td>
                     <td>
-                        <button onclick="window.location.href='/get/11-26'">Get</button>
+                        <button onclick="window.location.href='/2020-11-26'">Get</button>
                     </td>
                 </tr><tr>
                     <td>
                         Reports for 3rd Dec
                     </td>
                     <td>
-                        <button onclick="window.location.href='/get/12-03'">Get</button>
+                        <button onclick="window.location.href='/2020-12-03'">Get</button>
                     </td>
                 </tr><tr>
                     <td>
                         Reports for 10th Dec
                     </td>
                     <td>
-                        <button onclick="window.location.href='/get/12-10'">Get</button>
+                        <button onclick="window.location.href='/2020-12-10'">Get</button>
                     </td>
                 </tr>
             </table>
         </div>
+        <div style="text-align: center;">
+        <% if (messages.error) { %>
+        <p style="color:red; font-size: 1em; margin-top: -15%;"><%- messages.error %></p>
+        <% } %>
+        <% if (messages.success) { %>
+        <p style="color:green; font-size: 1em; margin-top: -15%;"><%- messages.success %></p>
+        <% } %>
+        </div>
+        <span id="btn">
+        <form action="/allow" method="post">
+            <button type="submit">Allow codes</button>
+            <% if (messages.allowed) { %>
+            <p style="color:green; font-size: 1em; margin-top: -15%;"><%- messages.allowed %></p>
+            <% } %>
+        </form>
+        <form action="/disallow" method="post">
+            <button type="submit">Disllow codes</button>
+            <% if (messages.disallowed) { %>
+            <p style="color:red; font-size: 1em; margin-top: -17%;"><%- messages.disallowed %></p>
+            <% } %>
+        </form>
+        <form action="/logout" method="post">
+            <button type="submit">Logout</button>
+        </form>
+
+    </span>
     </div>
 </body>
 
