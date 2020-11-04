@@ -17,7 +17,7 @@ router.post('/submit', function(req,res,next){
             return res.render('landing')
         } else {
             req.session.marked=1;
-            res.redirect('done');
+            res.redirect('thanks');
         }
     });
     

@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 var router = express.Router();
+const connection = require('../db');
 
 
 parent = path.resolve(__dirname, '..')

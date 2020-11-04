@@ -36,9 +36,10 @@ router.get('/', (req, res) => {
     })
 });
 
-router.get('/done',(req,res)=>{
+router.get('/thanks',(req,res)=>{
     res.sendFile(parent+'/public/thankyou.html');
 })
+
 
 
 
