@@ -13,6 +13,14 @@
     <div id="container">
         <img src="./bg.jpg" alt="Background image" id="desktop-img">
         <img src="./bg-mb.jpg" alt="Background image for mobile" id="mobile-img">
+                <div style="text-align: center;">
+                    <% if (messages.error) { %>
+                    <p style="color:red; font-size: 0.5em; "><%- messages.error %></p>
+                    <% } %>
+                    <% if (messages.success) { %>
+                    <p style="color:green; font-size: 0.5em;"><%- messages.success %></p>
+                    <% } %>
+                </div>
         <div id="table">
             <table>
                 <tr>
@@ -62,17 +70,9 @@
                 </tr>
             </table>
         </div>
-        <div style="text-align: center;">
-        <% if (messages.error) { %>
-        <p style="color:red; font-size: 0.5em; "><%- messages.error %></p>
-        <% } %>
-        <% if (messages.success) { %>
-        <p style="color:green; font-size: 0.5em;"><%- messages.success %></p>
-        <% } %>
-        </div>
         <span id="btn">
         <form action="/allow" method="post">
-            <button id="allow" type="submit">Allow codes</button>
+            <button id="allow" type="submit" style="margin-top: 5%;">Allow codes</button>
             <% if (messages.allowed) { %>
             <p style="color:green; font-size: 1em;"><%- messages.allowed %></p>
             <% } %>

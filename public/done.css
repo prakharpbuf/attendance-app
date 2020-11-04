@@ -71,14 +71,32 @@ table {
 }
 
 
-#container div{
+#text{
     font-size: 2em;
     line-height: 150%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
 	padding: 20% 20% 0 20%;
-	padding-top: 40vh;
+	padding-top: 30vh;
 }
+
+/* 
+#sticky{
+	background-color: white;
+	width: 100%;
+	padding: 0;
+	font-size: 1em;
+	line-height: 1;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+}
+#sticky button{
+	background-color: #005BBB;
+	color: #ffffff;
+	border: none;
+} */
+
 
 @media screen and (max-width:850px){
 	#container{

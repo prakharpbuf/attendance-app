@@ -15,7 +15,7 @@ function sendEmail(txt){
     });
     var mailOptions = {
         from: 'pawprakharpaw@gmail.com',
-        to: 'prakhar.paw08@gmail.com',
+        to: process.env.testing_email || 'prakhar.paw16@gmail.com',
         subject: '***Attendance report for '+month+"/"+date + " ***",
         text: txt
     };
@@ -48,7 +48,7 @@ router.get('/:year-:month-:date', function (req, res, next) {
             connection.query('select * from codes where extract (day from entereddate) = $1 and extract (month from entereddate) = $2;', [date, month], function (err, result) {
                 if (err) throw err
                 if (result.rows.length == 0) {
-                    req.flash('error', 'No records for this date found')
+                    req.flash('error', 'No records found for this date')
                     res.redirect('dashboard')
                 }
                 else {

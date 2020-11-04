@@ -41,11 +41,11 @@ router.get('/dashboard', function (req, res) {
     if (req.session.loggedin && req.session) {
         connection.query('Select allowed from allow', function(err,result){
             if(result.rows[0].allowed)
-            {req.flash('allowed','Codes are currently accepted')
+            {req.flash('allowed','Codes are currently being accepted')
             res.render('dashboard');
         }
         else{
-            req.flash('disallowed','Codes are currently not accepted')
+            req.flash('disallowed','Codes are currently not being accepted')
             res.render('dashboard')
         }
 
