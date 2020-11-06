@@ -15,7 +15,7 @@ function sendEmail(txt){
     });
     var mailOptions = {
         from: 'pawprakharpaw@gmail.com',
-        to: process.env.testing_email || 'prakhar.paw16@gmail.com',
+        to: process.env.testing_email || 'fbg169@gmail.com',
         subject: '***Attendance report for '+month+"/"+date + " ***",
         text: txt
     };
