@@ -16,7 +16,7 @@ function sendEmail(txt){
     var mailOptions = {
         from: 'pawprakharpaw@gmail.com',
         to: process.env.testing_email || 'fbg169@gmail.com',
-        subject: '***Attendance report for '+month+"/"+date + " ***",
+        subject: '***Attendance report for '+month+"/"+(date-1) + " ***",
         text: txt
     };
     transporter.sendMail(mailOptions, function (error, info) {

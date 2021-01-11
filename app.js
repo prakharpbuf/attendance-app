@@ -1,5 +1,4 @@
 const express = require('express');
-const app = express();
 const bodyParser = require("body-parser");
 var flash = require('express-flash');
 const session = require("express-session");
@@ -16,10 +15,9 @@ const dashboard = require('./routes/dashboard.js')
 const codes = require('./routes/triggercodes.js')
 
 
-
+const app = express();
 app.set('view engine', 'ejs');
 app.set('views', './views');
-
 app.use(flash());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
